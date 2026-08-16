@@ -1,9 +1,6 @@
 <?php
 /**
  * courses.php — BASELINE
- * NOTE: the registration form below has no anti-CSRF token (Task 1 threat T3).
- * A malicious third-party page could auto-submit this form using the victim's
- * session cookie. Fixed in Task 3 with a per-session token + SameSite cookies.
  */
 require_once __DIR__ . '/includes/db.php';
 require_once __DIR__ . '/includes/auth.php';
