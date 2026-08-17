@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // --- VULNERABLE PATTERN (Task 2 target) ---
     // Raw user input is concatenated directly into the SQL string for BOTH
-    // fields. An attacker-supplied email like:  ' OR '1'='1' -- 
+    // fields. An attacker-supplied email like:  ' OR '1'='1' -- | ' OR '1'='1' #
     // closes the string early, forces the condition true for every row,
     // and comments out the password check entirely.
     $sql = "SELECT id, full_name, email, role
