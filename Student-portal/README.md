@@ -2,31 +2,14 @@
 
 **Status:** This is the BASELINE build for the IFT542 assignment. It intentionally
 contains the vulnerabilities identified in the Task 1 STRIDE threat model
-(SQL injection in `login.php`, no CSRF token in `courses.php`, unrestricted
-URL import in `upload.php`, trust of client-supplied `user_id` in `profile.php`,
+(SQL injection in `login_vulnerable.php`, no CSRF token in `courses_vulnerable.php`, unrestricted
+URL import in `upload_vulnerable.php`, trust of client-supplied `user_id` in `profile_vulnerable.php`,
 verbose login errors). These will be fixed in Task 2 and Task 3 with clearly
-labeled "before/after" files — do not deploy this baseline outside an isolated lab.
+labeled "before/after" files.
 
-## Requirements
-- XAMPP (Apache + MySQL 8.0 + PHP 8.1) or equivalent LAMP stack
-- Browser
-
-## Setup
-1. Copy the `studentreg/` folder into `C:/xampp/htdocs/studentreg/`
-2. Start Apache and MySQL from the XAMPP control panel.
-3. Import the database:
-   ```
-   mysql -u root -p < db/schema.sql
-   mysql -u root -p < db/seed.sql
-   mysql -u root -p studentreg_db < db/schema_update_task2.sql
-   mysql -u root -p studentreg_db < db/schema_update_task3.sql
-   ```
-4. Edit `config.php` if your MySQL user/password differ from the XAMPP defaults.
-5. Visit `http://localhost/studentreg/`
 
 ## Test Accounts (fictitious data only)
 | Email | Password | Role |
-|---|---|---|
 | amina.bello@example.test | Password@123 | student |
 | john.okafor@example.test | Password@123 | student |
 | admin@example.test | Password@123 | admin |
